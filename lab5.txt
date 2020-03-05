@@ -1,0 +1,25 @@
+
+RAM = simpy.Container(env, init=100, capacity=100)
+y para tomar memoria del RAM: RAM.get(memoria)
+y para devolver memoria al RAM: RAM.put(memoria)
+en donde memoria es la cantidad de memoria que se está requiriendo del RAM
+
+new: 
+String proceso
+Int RamProceso 
+Boolean Ready
+Lista Strings
+
+ready: 
+Int CPU
+Running:
+CPU 3 instrucciones max 
+Numero al azar en waiting 2-> regresa a cola ready
+
+Waiting:
+Numero al azar 1 o 2, 1 -> cola waiting 
+
+Terminated:
+Si ya no hay mas instrucciones se sale del sistema
+
+Numero al azar random.expovariate(1.0 / interval)
