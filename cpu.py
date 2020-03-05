@@ -9,7 +9,7 @@ prom = 0 # promedio
 desvest = 0 #desviacion estandar
 env = simpy.Environment() #ambiente de simulación
 RAM = simpy.Container(env, init=100, capacity=100)#cantidad de ram
-cpus = simpy.Resource(env,capacity = 1)#Cantidad de CPU
+cpus = simpy.Resource(env,capacity = 2)#Cantidad de CPU
 tiempototal = 0
 
 
@@ -31,7 +31,7 @@ def pc(num,instr,env,tiempo_llegada,RAM,cpus):
             print('proceso %s Esperando por ram... ' % num)
             #yield env.timeout(10)  # Verificar cada 10 segundos
     else:
-        random_ram = random.randint(1,10)
+        random_ram = random.randint(1,1)
     
     tiempoEje = random_ram
     # Se verifica que exista memoria ram para llevarse acabo
@@ -80,9 +80,9 @@ def pc(num,instr,env,tiempo_llegada,RAM,cpus):
     
 # ---------------------------
 # Simulacion
-numprocesos = 25
+numprocesos = 200
 for i in range(numprocesos):
-    env.process(pc(i,random.randint(1,10),env,random.expovariate(1.0/10),RAM,cpus))
+    env.process(pc(i,random.randint(1,10),env,random.expovariate(1.0/1),RAM,cpus))
 env.run()  #correr la simulación hasta que termine
 # se calcula el promedio
 prom = tiempototal/numprocesos

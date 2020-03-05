@@ -1,0 +1,13 @@
+
+Diego Alvarez 19498
+
+¿Cual es el proceso que reduce mas el tiempo?
+
+En el archivo de excel, 'lab5' 
+
+Se puede observar como en los 3 intervalos, la secuencia generada
+a traves de la implementacion de 2 cpus con 100 de ram y 3 instrucciones 
+es la mas rapida, sin embargo la que tiene una desviacion estandar menor es 
+la opcion del intervalo de 10. Se concluye que esta es la mejor manera de 
+reducir el tiempo ya que los datos no varian tanto como en las otras opciones.
+
